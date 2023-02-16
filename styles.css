@@ -24,7 +24,7 @@
 /* GLOBAL STYLES */
 body {
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
   color: white;
   background-color: var(--dark);
 }
@@ -133,6 +133,10 @@ nav ul a:hover {
   color: var(--subtitle-color);
 }
 
+.hamburger {
+  display: none;
+}
+
 /* Colorful play hover effect */
 #play:hover .letter:nth-child(1) {
   color: red;
@@ -193,7 +197,7 @@ footer {
 }
 
 .fancy {
-  font-family: 'Lobster', cursive;
+  font-family: 'Lobster', Arial, Helvetica, sans-serif;
   font-size: 1.3em;
   line-height: .8em;
   color: var(--green);
@@ -255,17 +259,18 @@ footer {
 }
 
 /* ABOUT PAGE */
-#about-header {
+#about {
   margin: 0 72px;
   padding: 144px 0;
 }
 
-#about-header > h1 {
+#about > h1 {
   text-align: center;
+  font-size: 6.4rem;
   margin-bottom: 56px;
 }
 
-.about-header {
+.about {
   display: grid;
   grid-template-columns: 45vw 10vw auto;
 }
@@ -285,4 +290,110 @@ footer {
 .about-description {
   margin-top: 16px;
   color: var(--subtitle-color);
+}
+
+/* TABLET */
+@media only screen and (max-width: 1200px) {
+  h3 {
+    font-size: 2.4em;
+  }
+
+  p {
+    font-size: 1.6em;
+  }
+
+  .section-heading {
+    padding-bottom: 80px;
+  }
+
+  #work {
+    padding: 120px 0;
+  }
+  
+  .work-item {
+    margin: 0 48px 96px;
+  }
+
+  .work-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .work-description {
+    padding-right: 0;
+    align-self: auto;
+    margin-top: 16px;
+  }
+
+  #about {
+    padding: 112px 0;
+    margin: 0 56px;
+  }
+
+  #about > h1 {
+    width: auto;
+    font-size: 5.6em;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-image-fit {
+    height: 70vh;
+    object-fit: contain;
+  }
+
+  .about-content {
+    margin-top: 48px;
+  }
+}
+
+/* MOBILE and below */
+@media only screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    align-self: center;
+  }
+  
+  .hamburger img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .img-fit {
+    height: 50vh;
+  }
+
+  .section-heading {
+    padding-bottom: 48px;
+  }
+
+  #work {
+    padding: 88px 0;
+  }
+
+  .work-item {
+    margin: 0 24px 56px;
+  }
+
+  .work-info {
+    padding-left: 0;
+  }
+
+  #about {
+    padding: 88px 0;
+    margin: 0 24px;
+  }
+
+ #about > h1 {
+  font-size: 4.8em;
+  width: 100%;
+  margin: 0 0 56px;
+ }
 }
