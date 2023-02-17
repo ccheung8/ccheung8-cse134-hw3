@@ -16,14 +16,10 @@
       </div>
       <ul>
         <a href="/index.html">
-          <div class="link-container">
-            <li>Work</li>
-          </div>
+          <li class="active">Work</li>
         </a>
         <a href="about.html">
-          <div class="link-container">
-            <li>Me</li>
-          </div>
+          <li>Me</li>
         </a>
         <!-- Hamburger -->
       </ul>
@@ -45,7 +41,10 @@
       <div class="work-item">
         <div class="work-thumb">
           <a href="#">
-            <img class="img-fit" src="images/tfss_thumb.webp" alt="TransFamily Support Services case study thumbnail">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="images/tfss_thumb.webp">
+              <img class="img-fit" src="images/tfss_thumb-mini.webp" alt="TransFamily Support Services case study thumbnail">
+            </picture>
           </a>
         </div>
         <div class="work-info">
